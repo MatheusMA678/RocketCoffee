@@ -1,13 +1,13 @@
 import Image from "next/image";
 import React from "react";
-import { Variants, motion } from "framer-motion";
+import { motion } from "framer-motion";
 
 import ArrowRight from "@/assets/arrow-right.svg";
 import Cups from "@/assets/cups.png";
 import Coffee1 from "@/assets/coffee1.png";
 import Coffee2 from "@/assets/coffee2.png";
 
-const container: Variants = {
+const container = {
   hidden: {
     opacity: 0,
     translateY: 50,
@@ -25,7 +25,7 @@ const container: Variants = {
   },
 };
 
-const item: Variants = {
+const item = {
   hidden: {
     opacity: 0,
     translateY: 20,

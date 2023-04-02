@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import Image from "next/image";
-import { Variants, motion } from "framer-motion";
+import { motion } from "framer-motion";
 
 import LogoMobile from "@/assets/logo-mobile.svg";
 import Menu from "@/assets/menu.svg";
@@ -13,7 +13,7 @@ const links = [
   { id: 5, label: "Lojas", href: "/" },
 ];
 
-const navbarVariant: Variants = {
+const navbarVariant = {
   hidden: {
     opacity: 0,
   },
