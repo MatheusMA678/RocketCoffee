@@ -1,0 +1,8 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.font-outline {
+  text-shadow: -1px -1px 0 #8257e5, 1px -1px 0 #8257e5, -1px 1px 0 #8257e5,
+    1px 1px 0 #8257e5;
+}
