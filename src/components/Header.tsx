@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import Image from "next/image";
+import Image, { type StaticImageData } from "next/image";
 import { motion } from "framer-motion";
 
 import LogoMobile from "@/assets/logo-mobile.svg";
@@ -31,9 +31,9 @@ export const Header = () => {
 
   return (
     <header className="fixed z-30 flex h-24 w-full items-center justify-between border-b border-[#29292E] bg-black px-8">
-      <Image src={LogoMobile} alt="Logo" />
+      <Image src={LogoMobile as StaticImageData} alt="Logo" />
       <button onClick={() => setShow(!show)}>
-        <Image src={Menu} alt="Menu" />
+        <Image src={Menu as StaticImageData} alt="Menu" />
       </button>
       <motion.nav
         variants={navbarVariant}

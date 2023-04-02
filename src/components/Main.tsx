@@ -1,4 +1,4 @@
-import Image from "next/image";
+import Image, { type StaticImageData } from "next/image";
 import React from "react";
 import { motion } from "framer-motion";
 
@@ -48,7 +48,7 @@ export const Main = () => {
       </h1>
       <button className="flex items-center gap-4 rounded-md bg-black px-8 py-2 text-xs font-extrabold ring-1 ring-secondPurple transition hover:opacity-80 active:bg-secondPurple active:opacity-100">
         PEDIR MEU CAFÉ
-        <Image src={ArrowRight} alt="Pedir meu café" />
+        <Image src={ArrowRight as StaticImageData} alt="Pedir meu café" />
       </button>
       <h2 className="text-center text-4xl font-extrabold">
         Greate Coffee <br />
