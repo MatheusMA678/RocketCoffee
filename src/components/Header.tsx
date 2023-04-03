@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 
 import LogoMobile from "@/assets/logo-mobile.svg";
 import Menu from "@/assets/menu.svg";
+import LogoDesktop from "@/assets/logo-desktop.svg";
 
 const links = [
   { id: 1, label: "Home", href: "/" },
@@ -30,10 +31,27 @@ export const Header = () => {
   const [show, setShow] = useState(false);
 
   return (
-    <header className="fixed z-30 flex h-24 w-full items-center justify-between border-b border-[#29292E] bg-black px-8">
-      <Image src={LogoMobile as StaticImageData} alt="Logo" />
-      <button onClick={() => setShow(!show)}>
+    <header className="fixed z-30 flex h-24 w-full items-center justify-between border-b border-[#29292E] bg-black px-8  sm:justify-center sm:gap-24 sm:border-none sm:bg-transparent">
+      <Image
+        src={LogoMobile as StaticImageData}
+        alt="Logo"
+        className="sm:hidden"
+      />
+      <Image
+        src={LogoDesktop as StaticImageData}
+        alt="Logo"
+        className="hidden sm:block"
+      />
+      <button onClick={() => setShow(!show)} className="sm:hidden">
         <Image src={Menu as StaticImageData} alt="Menu" />
+      </button>
+      <nav className="hidden items-center gap-4 sm:flex">
+        {links.map((link) => (
+          <div className="text-sm font-semibold">{link.label}</div>
+        ))}
+      </nav>
+      <button className="hidden rounded-md border border-purple px-8 py-2 text-sm font-bold transition hover:bg-purple sm:block">
+        PEGAR MEU CAFÉ
       </button>
       <motion.nav
         variants={navbarVariant}
